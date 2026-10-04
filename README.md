@@ -24,20 +24,16 @@ cd <YOUR-REPOSITORY-NAME>
 
 ### 2. Create a Virtual Environment
 
-A virtual environment isolates project dependencies to avoid conflicts with system-wide packages.
-
-* macOS / Linux / GitHub Codespaces: python3 -m venv mi_entorno
-* Windows (Command Prompt / PowerShell): python -m venv mi_entorno
+* macOS / Linux / GitHub Codespaces: python3 -m venv .venv
+* Windows (Command Prompt / PowerShell): python -m venv .venv
 
 ### 3. Activate the Virtual Environment
 
-Always activate the environment before running code or installing new packages.
+* macOS / Linux / GitHub Codespaces: source .venv/bin/activate
+* Windows (Command Prompt): .venv\Scripts\activate.bat
+* Windows (PowerShell): .\.venv\Scripts\Activate.ps1
 
-* macOS / Linux / GitHub Codespaces: source mi_entorno/bin/activate
-* Windows (Command Prompt): mi_entorno\Scripts\activate.bat
-* Windows (PowerShell): .\mi_entorno\Scripts\Activate.ps1
-
-> Note: When active, you will see (mi_entorno) at the beginning of your terminal prompt.
+> Note: When active, you will see (.venv) at the beginning of your terminal prompt.
 
 ---
 
