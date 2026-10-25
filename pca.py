@@ -21,4 +21,9 @@ if __name__ == '__main__':
 
     dt_features = StandardScaler().fit_transform(dt_features)
 
+
     X_train, X_test, y_train, y_test = train_test_split(dt_features, dt_target, test_size=0.3, random_state=42)
+
+    # consulting the shape of the training data
+    print(X_train.shape)
+    print(y_train.shape)
