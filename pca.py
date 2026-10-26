@@ -47,6 +47,10 @@ if __name__ == '__main__':
         pca.explained_variance_ratio_,
         marker='o',
     )
+
+    # the title of the plot is set to 'Explained variance ratio by principal component', which indicates that the plot shows how much of the total variance in the data is explained by each principal component.
+    plt.xlabel('Principal component')
+    plt.ylabel('Explained variance ratio')
  
     # En Codespaces no hay pantalla: guardamos la imagen ANTES de show()
     plt.savefig('pca_varianza.png')
