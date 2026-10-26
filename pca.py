@@ -55,3 +55,16 @@ if __name__ == '__main__':
     # En Codespaces no hay pantalla: guardamos la imagen ANTES de show()
     plt.savefig('pca_varianza.png')
     plt.show()
+
+    # create a new instance of LogisticRegression with the solver set to 'lbgfgs'. The solver is an optimization algorithm used to find the best parameters for the logistic regression model. 'lbfgs' is a popular choice for small to medium-sized datasets and is known for its efficiency and accuracy.
+    logistic = LogisticRegression(solver='lbfgs')
+
+    dt_train = pca.transform(X_train)
+    dt_test = pca.transform(X_test)
+    logistic.fit(dt_train, y_train)
+    print("score PCA: ", logistic.score(dt_test, y_test))
+
+    dt_train = ipca.transform(X_train)
+    dt_test = ipca.transform(X_test)
+    logistic.fit(dt_train,  y_train)
+    print("score IPCA: ", logistic.score(dt_test, y_test))
