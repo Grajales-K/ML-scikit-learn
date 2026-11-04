@@ -36,5 +36,14 @@ if __name__ == '__main__':
     logistic.fit(dt_train, y_train)
 
     print('SCORE KPCA: ', logistic.score(dt_test, y_test))
+    #  python kpca.py
+    # age  sex  cp  ...  ca  thal  target
+    # 0   52    1   0  ...   2     3       0
+    # 1   53    1   0  ...   0     3       0
+    # 2   70    1   0  ...   0     3       0
+    # 3   61    1   0  ...   1     3       0
+    # 4   62    0   0  ...   3     2       0
 
+    # [5 rows x 14 columns]
+    # SCORE KPCA:  0.7987012987012987
 
